@@ -91,15 +91,10 @@ public class AutomobileEntity extends Entity implements RenderableAutomobile, En
 
     private final AutomobileStats stats = new AutomobileStats();
 
-    @Environment(EnvType.CLIENT)
     private Model frameModel = null;
-    @Environment(EnvType.CLIENT)
     private Model wheelModel = null;
-    @Environment(EnvType.CLIENT)
     private Model engineModel = null;
-    @Environment(EnvType.CLIENT)
     private @Nullable Model rearAttachmentModel = null;
-    @Environment(EnvType.CLIENT)
     private @Nullable Model frontAttachmentModel = null;
 
     public static final int SMALL_TURBO_TIME = 35;
@@ -310,7 +305,6 @@ public class AutomobileEntity extends Entity implements RenderableAutomobile, En
         accelerating = (1 & d) > 0;
     }
 
-    @Environment(EnvType.CLIENT)
     public boolean updateModels = true;
 
     public AutomobileEntity(EntityType<?> type, World world) {

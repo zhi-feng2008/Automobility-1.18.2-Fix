@@ -11,12 +11,14 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-	maven { url = "https://maven.gegy.dev/" }
-	maven { url = "https://maven.terraformersmc.com/" }
-	maven { url = "https://aperlambda.github.io/maven" }
-	maven { url = "https://hephaestus.dev/release" }
-	maven { url = "https://storage.googleapis.com/devan-maven/" }
-	maven { url = "https://api.modrinth.com/maven" }
+	mavenCentral()
+	maven { url 'https://maven.fabricmc.net/' }
+	maven { url 'https://maven.terraformersmc.com/' }
+	maven { url 'https://maven.gegy.dev/' }
+	maven { url 'https://aperlambda.github.io/maven/' }
+	maven { url 'https://hephaestus.dev/release/' }
+	maven { url 'https://storage.googleapis.com/devan-maven/' }
+	maven { url 'https://api.modrinth.com/maven/' }
 }
 
 dependencies {
@@ -42,8 +44,7 @@ dependencies {
 	include "dev.monarkhes:myron:${project.myron_version}"
 
 	// Json't
-	modImplementation "net.devtech:arrp:${project.arrp_version}"
-	include "net.devtech:arrp:${project.arrp_version}"
+	modImplementation files('libs/arrp-0.5.7.jar')
 
 	// Json entity models
 	modImplementation "maven.modrinth:jsonem:${project.jsonem_version}"

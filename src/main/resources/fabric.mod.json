@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "automobility",
+  "id": "automobility_fix",
   "version": "${version}",
-  "name": "Automobility",
+  "name": "Automobility-Fix",
   "description": "Vehicles and whatnot",
   "authors": [
-    "FoundationGames"
+    "FoundationGames",
+    "ZhiFeng"
   ],
   "contact": {
     "homepage": "",
@@ -26,7 +27,7 @@
     "automobility.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.15.1",
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"

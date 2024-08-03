@@ -69,11 +69,11 @@ public enum AutomobilityItems {;
     }
 
     @Environment(EnvType.CLIENT) private static EntityRendererFactory.Context cachedCtx;
-    @Environment(EnvType.CLIENT) private static final Map<AutomobileFrame, Model> frameModelPool = new HashMap<>();
-    @Environment(EnvType.CLIENT) private static final Map<AutomobileWheel, Model> wheelModelPool = new HashMap<>();
-    @Environment(EnvType.CLIENT) private static final Map<AutomobileEngine, Model> engineModelPool = new HashMap<>();
-    @Environment(EnvType.CLIENT) private static final Map<RearAttachmentType<?>, Model> rearAttModelPool = new HashMap<>();
-    @Environment(EnvType.CLIENT) private static final Map<FrontAttachmentType<?>, Model> frontAttModelPool = new HashMap<>();
+    private static final Map<AutomobileFrame, Model> frameModelPool = new HashMap<>();
+    private static final Map<AutomobileWheel, Model> wheelModelPool = new HashMap<>();
+    private static final Map<AutomobileEngine, Model> engineModelPool = new HashMap<>();
+    private static final Map<RearAttachmentType<?>, Model> rearAttModelPool = new HashMap<>();
+    private static final Map<FrontAttachmentType<?>, Model> frontAttModelPool = new HashMap<>();
 
     private static final AutomobileData reader = new AutomobileData();
 
