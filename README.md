@@ -1,3 +1,35 @@
+# Automobility-1.18.2-Fix
+## 用于 Atomobility-1.18.2 的 FabricLoader-0.15.x 修复分支
+这个分支只是用于飞车其匠在 1.18.2 FabricLoader-0.15.x 的服务端无法运行的情况
+
+### 参考报错
+
+```
+java.lang.RuntimeException: Could not execute entrypoint stage 'main' due to errors, provided by 'automobility'!
+	at net.fabricmc.loader.impl.FabricLoaderImpl.lambda$invokeEntrypoints$2(FabricLoaderImpl.java:388) ~[fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33) ~[fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:386) ~[fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startServer(Hooks.java:63) ~[fabric-loader-0.15.11.jar:?]
+	at net.minecraft.server.Main.main(Main.java:101) [server-intermediary.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:470) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotServer.main(KnotServer.java:23) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.loader.impl.launch.server.FabricServerLauncher.main(FabricServerLauncher.java:69) [fabric-loader-0.15.11.jar:?]
+	at net.fabricmc.installer.ServerLauncher.main(ServerLauncher.java:69) [fabric-server-mc.1.18.2-loader.0.15.11-launcher.1.0.1.jar:1.0.1]
+Caused by: java.lang.NoSuchFieldError: wheelModelPool
+	at io.github.foundationgames.automobility.item.AutomobilityItems.<clinit>(AutomobilityItems.java:73) ~[automobility-0.3+1.18.2.jar:?]
+	at io.github.foundationgames.automobility.Automobility.onInitialize(Automobility.java:45) ~[automobility-0.3+1.18.2.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.invokeEntrypoints(FabricLoaderImpl.java:384) ~[fabric-loader-0.15.11.jar:?]
+	... 7 more
+```
+
+### 测试环境
+- Jdk 17(17.0.10.0)
+- Fabric Api 0.77.0
+- Fabric-loader 0.15.11
+
+## 下发为原仓库 README
+
 ![Automobility](./md/banner.png)
 
 ### A Minecraft mod adding customizable vehicles.
